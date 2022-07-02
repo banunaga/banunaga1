@@ -1,0 +1,46 @@
+package page.object;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+public class PageObectFactory {
+	WebDriver driver;
+	public PageObectFactory(WebDriver driver) {
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
+	@FindBy(xpath="//label[2]//span[2]")
+	WebElement userradio;
+	@FindBy(xpath="//select[@class='form-control']")
+	WebElement option;
+	@FindBy(id="terms")
+	WebElement terms;
+	@FindBy(id="signInBtn")
+	WebElement singin;
+	@FindBy(id="okayBtn")
+	WebElement okay;
+	
+	public WebElement radio() {
+		return userradio;
+	}
+	public void option() throws InterruptedException {
+		WebElement options = driver.findElement(By.xpath("//select[@class='form-control']"));
+		Select op=new Select(options);
+		op.selectByIndex(1);
+		Thread.sleep(5000);}
+	public WebElement terms() {
+		return terms;
+	}
+	public WebElement sigin() {
+		return singin;
+	}
+	public WebElement okay() {
+		return okay;
+	}
+	
+
+}

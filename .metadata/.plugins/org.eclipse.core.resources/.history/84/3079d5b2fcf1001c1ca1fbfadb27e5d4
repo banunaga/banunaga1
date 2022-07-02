@@ -1,0 +1,24 @@
+package page.object;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class PageObectFactory {
+	WebDriver driver;
+	public PageObectFactory(WebDriver driver) {
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
+	@FindBy(xpath="//label[2]//span[2]")
+	WebElement userradio;
+	@FindBy(className="form-control")
+	WebElement option;
+	@FindBy(id="terms")
+	WebElement terms;
+	@FindBy(id="signInBtn")
+	WebElement sigin;
+	
+
+}

@@ -1,0 +1,13 @@
+package page.object;
+
+import org.openqa.selenium.WebDriver;
+
+public class PageObectPatter {
+	WebDriver driver;
+
+	public PageObectPatter(WebDriver driver) {
+		
+	}
+	
+
+}

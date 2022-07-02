@@ -1,0 +1,10 @@
+package page.testcases;
+import org.openqa.selenium.firefox.FirefoxDriver.SystemProperty;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class TestCases {
+	
+System.setProperty("webdriver.chrome.driver","E:\\chromedriver_win\\chromedriver.exe");
+
+}

@@ -1,0 +1,30 @@
+package page.testcases;
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver.SystemProperty;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import page.object.PageObectFactory;
+import page.object.PageObectPatter;
+
+public class loginpage {
+	@Test
+	public void setup()
+	{
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.get("https://www.rahulshettyacademy.com/loginpagePractise/");
+		PageObectPatter pop= new PageObectPatter(driver);
+		PageObectFactory pof = new PageObectFactory(driver);
+		pop.uname().sendKeys("rahulshettyacademy");
+		pop.pass().sendKeys("learning");
+		pof.radio().click();
+		pof.okay().click();
+		
+	}
+
+}

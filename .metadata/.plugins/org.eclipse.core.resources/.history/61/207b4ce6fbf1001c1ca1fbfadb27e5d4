@@ -1,0 +1,13 @@
+package page.object;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class PageObectFactory {
+	WebDriver driver;
+	public PageObectFactory(WebDriver driver) {
+		this.driver=driver;
+		PageFactory.initElements(this, driver);
+	}
+
+}

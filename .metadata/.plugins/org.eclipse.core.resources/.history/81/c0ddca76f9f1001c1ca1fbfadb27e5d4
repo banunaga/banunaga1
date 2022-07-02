@@ -1,0 +1,10 @@
+package page.testcases;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class TestCases {
+	
+	WebDriverManager.chromedriver().setup();
+	
+	
+
+}

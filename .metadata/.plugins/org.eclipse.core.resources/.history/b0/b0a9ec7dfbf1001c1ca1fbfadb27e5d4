@@ -1,0 +1,17 @@
+package page.object;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class PageObectPatter {
+	WebDriver driver;
+
+	public PageObectPatter(WebDriver driver) {
+		this.driver=driver;
+	}
+	
+	By username = By.xpath("//input[@name='username']");
+	By password= By.name("password");
+	
+
+}
